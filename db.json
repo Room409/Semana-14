@@ -1,0 +1,32 @@
+{
+  "clientes": [
+    {
+      "nombre": "Gaston Federico",
+      "email": "gaston@gmail.com",
+      "telefono": "2234977777",
+      "empresa": "GSA",
+      "id": 28
+    },
+    {
+      "nombre": "Sabri Anahi",
+      "email": "sabri@gmail.com",
+      "telefono": "223223223",
+      "empresa": "Sabritas",
+      "id": 29
+    },
+    {
+      "nombre": "Kevin Brian",
+      "email": "kevin@gmail.com",
+      "telefono": "2239911992",
+      "empresa": "Arredo",
+      "id": 30
+    },
+    {
+      "nombre": "Ika",
+      "email": "ika@gmail.com",
+      "telefono": "2231111111",
+      "empresa": "Arredo",
+      "id": 31
+    }
+  ]
+}
