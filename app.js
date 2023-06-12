@@ -22,7 +22,7 @@ apiFake().then(users => {
         </td>
       </tr>
     `;
-    tableContent = row + tableContent ;
+    tableContent = row + tableContent;
   }
   const table = `
     <table class="table">
@@ -40,12 +40,11 @@ apiFake().then(users => {
       </tbody>
     </table>
   `;
- container.innerHTML = table
-
+  container.innerHTML = table
+  deleteUser(users)
   editUser(users);
 
 });
-
 
 // Agregar cliente
 const addClient = document.getElementById('addNewClient');
@@ -86,9 +85,9 @@ function editUser(users) {
     btnEdit.addEventListener('click', () => {
       const userId = parseInt(btnEdit.dataset.userId);
       const user = users.find(user => user.id === userId);
-      
-      
-      const request = async () =>{
+
+
+      const request = async () => {
         const respose = await fetch('http://localhost:3000/clientes')
         const data = await respose.json()
 
@@ -99,30 +98,31 @@ function editUser(users) {
       }
       request()
       saveChangeBtn.dataset.userId = userId;
-      
+
     });
   });
   
+  //SAVECHANGE DEL MODAL EDITAR
   const saveChangeBtn = document.getElementById('saveEdit');
   saveChangeBtn.addEventListener('click', async () => {
     const userId = parseInt(saveChangeBtn.dataset.userId);
     const user = users.find(user => user.id === userId);
-    
+
     if (user) {
       const nameEdited = document.getElementById('nombreCliente').value;
       const emailEdited = document.getElementById('emailCliente').value;
       const phoneEdited = document.getElementById('telefonoCliente').value;
       const empresaEdited = document.getElementById('empresaCliente').value;
-     
+
       const updatedUser = {
         nombre: nameEdited,
         email: emailEdited,
         telefono: phoneEdited,
         empresa: empresaEdited
-        
+
       };
 
-      
+
       const response = await fetch(`http://localhost:3000/clientes/${userId}`, {
         method: 'PUT',
         headers: {
@@ -131,13 +131,37 @@ function editUser(users) {
         body: JSON.stringify(updatedUser),
       });
 
-      ///////
-
       const modalEdit = bootstrap.Modal.getInstance(document.getElementById('modalEdit'))
       modalEdit.hide()
     }
   });
 }
+
+
+//ELIMINAR
+function deleteUser(users) {
+  const deleteBtnList = document.querySelectorAll('#btnDelete');
+  deleteBtnList.forEach(deleteBtn => {
+    deleteBtn.addEventListener('click', () => {
+      const userId = parseInt(deleteBtn.getAttribute('data-user-id'));
+      const user = users.find(user => user.id === userId);
+
+      const deleteBtnElement = document.getElementById('deleteBtnElement');
+      deleteBtnElement.addEventListener('click', async () => {
+        if (user) {
+          users.splice(user, 1);
+
+          const response = await fetch(`http://localhost:3000/clientes/${userId}`, {
+            method: 'DELETE',
+          });
+        }
+      });
+    });
+  });
+}
+
+
+
 
 
 

@@ -1,10 +1,10 @@
 {
   "clientes": [
     {
-      "nombre": "edit",
-      "email": "edit@edit.com",
-      "telefono": "20392039",
-      "empresa": "EDIT",
+      "nombre": "Gaston Federico",
+      "email": "gaston@gmail.com",
+      "telefono": "2234977777",
+      "empresa": "GSA",
       "id": 28
     },
     {
@@ -29,88 +29,18 @@
       "id": 31
     },
     {
-      "nombre": "test",
-      "email": "test@test.com",
-      "telefono": "23232323",
+      "nombre": "kan",
+      "email": "kan@testing.com",
+      "telefono": "21309120390",
       "empresa": "IDAT",
       "id": 32
     },
     {
-      "nombre": "TEST1",
-      "email": "test@test.com",
-      "telefono": "94944994",
-      "empresa": "IDAT",
+      "nombre": "Kibo",
+      "email": "test@coconut.com",
+      "telefono": "2323213",
+      "empresa": "IDATT",
       "id": 33
-    },
-    {
-      "nombre": "TEST123",
-      "email": "test1@test.com",
-      "telefono": "29382392389",
-      "empresa": "IDAT",
-      "id": 34
-    },
-    {
-      "nombre": "Test99",
-      "email": "test@test.com",
-      "telefono": "2392392839",
-      "empresa": "IDAT",
-      "id": 35
-    },
-    {
-      "nombre": "YUYAZO",
-      "email": "test@hotmail.com",
-      "telefono": "9898988",
-      "empresa": "IDAT",
-      "id": 36
-    },
-    {
-      "nombre": "testing",
-      "email": "testing@testing.com",
-      "telefono": "2301289",
-      "empresa": "IDAT",
-      "id": 37
-    },
-    {
-      "nombre": "1111",
-      "email": "1111",
-      "telefono": "1111",
-      "empresa": "1111",
-      "id": 38
-    },
-    {
-      "nombre": "te",
-      "email": "testtt@test.com",
-      "telefono": "039409",
-      "empresa": "TESTING",
-      "id": 39
-    },
-    {
-      "nombre": "TESTT",
-      "email": "TESTTT@hotmail.com",
-      "telefono": "232323",
-      "empresa": "123233",
-      "id": 40
-    },
-    {
-      "nombre": "TEST",
-      "email": "dr@dr.com",
-      "telefono": "2321321",
-      "empresa": "IDIDI",
-      "id": 41
-    },
-    {
-      "nombre": "JUAN",
-      "email": "sese@.com",
-      "telefono": "23233",
-      "empresa": "IDAD",
-      "id": 42
-    },
-    {
-      "nombre": "ewewe",
-      "email": "test@test.com",
-      "telefono": "232332",
-      "empresa": "IDDDA",
-      "id": 43
     }
   ]
 }
