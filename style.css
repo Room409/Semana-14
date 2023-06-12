@@ -10,3 +10,10 @@
 .email-fs{
     font-size: .8rem;
 }
+.container-fluid{
+    min-height: 100vh;
+}
+.row-custom{
+   flex: 1;
+}
+
