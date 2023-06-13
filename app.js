@@ -15,10 +15,12 @@ apiFake().then(users => {
       <tr>
         <th scope="row"></th>
         <td class="fs-6 fw-semibold nameClient">${user.nombre} <br> <span class="email-fs fw-lighter emailClient">${user.email}</span></td>
-        <td class="telefonoClient">${user.telefono}</td>
-        <td class="empresaClient">${user.empresa}</td>
-        <td><button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalEdit" id="btnEdit" data-user-id=${user.id}>Editar</button>
-            <button class="btn btn-danger" data-bs-toggle="modal"  data-bs-target="#modalDelete" id="btnDelete" data-user-id=${user.id}>Eliminar</button>
+        <td class="telefonoClient centered-text">${user.telefono}</td>
+        <td class="empresaClient centered-text">${user.empresa}</td>
+        <td><div class="col-12 col-sm-8 col-md-7 d-md-flex gap-2">
+        <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#modalEdit" id="btnEdit" data-user-id=${user.id}>Editar</button>
+        <button class="btn btn-danger w-100" data-bs-toggle="modal"  data-bs-target="#modalDelete" id="btnDelete" data-user-id=${user.id}>Eliminar</button>
+            </div>
         </td>
       </tr>
     `;
@@ -101,7 +103,7 @@ function editUser(users) {
 
     });
   });
-  
+
   //SAVECHANGE DEL MODAL EDITAR
   const saveChangeBtn = document.getElementById('saveEdit');
   saveChangeBtn.addEventListener('click', async () => {

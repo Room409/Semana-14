@@ -17,3 +17,11 @@
    flex: 1;
 }
 
+.newClient:hover, .clients:hover{
+    background-color: blueviolet;
+    cursor: pointer;
+}
+
+.centered-text{
+    vertical-align: middle;
+}
